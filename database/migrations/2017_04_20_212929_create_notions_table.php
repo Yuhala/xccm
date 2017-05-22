@@ -16,9 +16,9 @@ class CreateNotionsTable extends Migration
         Schema::create('notions', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->integer('paragraph_id')->unsigned();
-            $table->string('domain');
-            $table->string('content');
+            $table->integer('section_id')->unsigned();
+            $table->foreign('section_id')->references('id')->on("sections");
+            $table->mediumText('content');
             $table->timestamps();
         });
     }

@@ -17,7 +17,9 @@ class CreateChaptersTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->integer('part_id')->unsigned();
-            $table->string('domain');
+            $table->foreign("part_id")->references("id")->on('parts');
+            $table->mediumText("introduction");
+            $table->mediumText("conclusion");
             $table->timestamps();
         });
     }

@@ -7,12 +7,12 @@
     'password'=>"Mot de passe",
     'retypepassword'=>"Confirmez le mot de passe",
     'terms'=>"J'accepte les termes",
-    'register'=>"S'enregistrer",
+    'register'=>"Enregistrement",
     'membership'=>'Je suis déja membre',
     'home'=>'Acceuil',
     'homevisitother'=>'Version anglaise',
     'homevisitotherlink'=>'/?lang=en',
-    'register'=>'Inscrivez vous',
+    'register'=>"S'inscrire",
     'welcomemessage'=>"Bienvenue sur la plateforme",
     'project'=>'Projet'
   ]

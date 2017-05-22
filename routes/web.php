@@ -24,4 +24,18 @@ Route::group(['middleware' => 'auth'], function () {
     #adminlte_routes
 });
 
-Route::resource('cours','CoursController');
+Route::get('/composition', function (){
+    return redirect("/composition/course/create");
+});
+
+
+Route::group(["prefix" => "composition"], function () {
+    Route::resource("notion",NotionController::class);
+    Route::resource('course',CourseController::class);
+    Route::resource('part',PartController::class);
+    Route::resource('chapter',ChapterController::class);
+    Route::resource('section',SectionController::class);
+    Route::post("deletenode","CompositionController@delete");
+    Route::post("duplicatenode","CompositionController@duplicate");
+});
+

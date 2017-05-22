@@ -29,7 +29,7 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
-<body class="skin-blue layout-top-nav">
+<body class="skin-green sidebar-collapse">
 <div id="app" v-cloak>
     <div class="wrapper">
 
@@ -45,7 +45,7 @@ desired effect
         <!-- Main content -->
         <section class="content">
             <!-- Your Page Content Here -->
-            Test content
+
             @yield('main-content')
         </section><!-- /.content -->
     </div><!-- /.content-wrapper -->

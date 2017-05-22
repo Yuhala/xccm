@@ -1,0 +1,15 @@
+.content{
+    width:380px;
+    margin: auto;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.content .form-group,.content .row{
+    margin:30px;
+}
+
+h3{
+    font-family: "comic sans ms";
+    color: #0a6aa1;
+}

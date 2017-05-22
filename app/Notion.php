@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Notion extends Model
 {
     protected $fillable = [
-        'title', 'author', 'domain','content','paragraph_id'
+        'title', 'section_id','content'
     ];
 
 }

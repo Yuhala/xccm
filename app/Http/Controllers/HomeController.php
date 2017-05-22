@@ -7,8 +7,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Course;
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * Class HomeController
@@ -33,6 +35,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('adminlte::home');
+        $id=Auth::user()->id;
+        $courses=Course::where('author_id',$id)->orderBy('id','desc')->get();
+        return view('vendor.home',['courses'=>$courses]);
     }
 }

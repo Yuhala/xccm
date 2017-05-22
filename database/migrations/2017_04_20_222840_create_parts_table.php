@@ -16,8 +16,10 @@ class CreatePartsTable extends Migration
         Schema::create('parts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->integer('cours_id')->unsigned();
-            $table->string('domain');
+            $table->integer('course_id')->unsigned();
+            $table->foreign("course_id")->references("id")->on("courses");
+            $table->mediumText("introduction");
+            $table->mediumText('conclusion');
             $table->timestamps();
         });
     }
